@@ -19,20 +19,22 @@
   <!-- Bootstrap Icon CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <!-- mapbox links -->
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+
 </head>
 
 <body>
 
   <!-- container-fluid-->
   <!-- <div class="container-fluid text-bg-primary p-3 text-center">
-    Hello world
-  </div> -->
+          Hello world
+        </div> -->
   <!--container-->
   <!-- <div class="container text-bg-danger p-3 text-center">
-    Hello world
-  </div>
-  <button id='send' onclick="login();">Connect</button>
+          Hello world
+        </div>
+        <button id='send' onclick="login();">Connect</button>
   -->
 
   <!-- Bootstrap Navbar Toggle -->
@@ -332,7 +334,7 @@
             <div class="card-body text-center">
               <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mb-3" alt="">
               <h3 class="card-title mb-3">John Doe</h3>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ad iure veritatis
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Impedit ad iure veritatis
                 reprehenderit pariatur eaque?</p>
               <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
               <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -348,7 +350,7 @@
             <div class="card-body text-center">
               <img src="https://randomuser.me/api/portraits/women/11.jpg" class="rounded-circle mb-3" alt="">
               <h3 class="card-title mb-3">Jane Doe</h3>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ad iure veritatis
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Impedit ad iure veritatis
                 reprehenderit pariatur eaque?</p>
               <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
               <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -364,7 +366,7 @@
             <div class="card-body text-center">
               <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle mb-3" alt="">
               <h3 class="card-title mb-3">Steve Doe</h3>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ad iure veritatis
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Impedit ad iure veritatis
                 reprehenderit pariatur eaque?</p>
               <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
               <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -380,7 +382,7 @@
             <div class="card-body text-center">
               <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3" alt="">
               <h3 class="card-title mb-3">Sarah Doe</h3>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ad iure veritatis
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Impedit ad iure veritatis
                 reprehenderit pariatur eaque?</p>
               <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
               <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -424,6 +426,18 @@
         <!-- map -->
         <div class="col-md">
           <div id="map"></div>
+
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoia3Jpc3Y3IiwiYSI6ImNsY2p5cnQ0NzYzanUzcHA5NW81NDkxZWgifQ.z8zCkT1PBJsDQbLQE5zXQg';
+            const map = new mapboxgl.Map({
+              container: 'map',
+              // Replace YOUR_STYLE_URL with your style URL.
+              style: 'mapbox://styles/mapbox/streets-v12',
+              center: [-71.060982, 42.35725],
+              zoom: 18
+            });
+          </script>
+
         </div>
 
       </div>
@@ -435,7 +449,7 @@
   <footer class="p-5 bg-dark text-white text-center position-relative">
     <div class="container">
       <p class="lead">Copyright &copy; 2021 Flux Soccer Academy</p>
-      <a href="" class="position-absolute bottom-0 end-0 p-5"><i class="bi bi-arrow-up-circle h1" </a>
+      <a href="" class="position-absolute bottom-0 end-0 p-5"><i class="bi bi-arrow-up-circle h1"></i> </a>
     </div>
   </footer>
 
@@ -492,7 +506,6 @@
   </div>
 
 
-
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover
   page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
@@ -500,17 +513,8 @@
   -->
   <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
   <!-- mapbox script tag -->
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1Ijoia3Jpc3Y3IiwiYSI6ImNsY2p4YjZ2aTAzOG8zbnM5ajc5MW04OW4ifQ.gj9EMUTCqhM4YBVVHOYJLg';
-    const map = new mapboxgl.Map({
-      container: 'map',
-      // Replace YOUR_STYLE_URL with your style URL.
-      //style: 'style.css',
-      center: [-71.060982, 42.35725],
-      zoom: 18,
-    });
-  </script>
+
+
 </body>
 
 </html>
